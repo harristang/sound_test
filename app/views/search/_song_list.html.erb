@@ -1,0 +1,14 @@
+
+<% if @songs %>
+
+  <% @songs.each do |songObj| %>
+    <% song = songObj[1] %>
+    <div draggable="true" style="padding: 10px;margin-bottom:10px;border: 1px solid black; width:300px;">
+      <%= image_tag song[:artwork_url] %>
+      <%= song[:title] %>
+    </div>
+
+  <% end %>
+
+<% end %>
+
